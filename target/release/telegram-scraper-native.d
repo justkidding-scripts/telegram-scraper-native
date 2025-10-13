@@ -1,0 +1,1 @@
+/home/nike/Telegram-Invite-Bulk/Telegram-Invite-Bulk/telegram-scraper-native/target/release/telegram-scraper-native: /home/nike/Telegram-Invite-Bulk/Telegram-Invite-Bulk/telegram-scraper-native/src/main.rs

@@ -1,0 +1,32 @@
+[package]
+name = "telegram-scraper-native"
+version = "2.0.0"
+edition = "2021"
+authors = ["WARP Research Team"]
+description = "High-performance native Telegram scraper - Rust/C++ hybrid"
+
+[lib]
+name = "telegram_scraper_core"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+# Core dependencies for fast build
+tokio = { version = "1.35", features = ["rt-multi-thread", "time", "macros"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+[[bin]]
+name = "telegram-scraper-native"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release.build-override]
+opt-level = 3
