@@ -1,44 +1,44 @@
-# 🦀🔥 Native Telegram Scraper v2.0 - C++/Rust Hybrid
+# Native Telegram Scraper v2.0 - C++/Rust Hybrid
 
 **10x faster than Python implementation** - High-performance native compiled telegram scraper built with Rust and C++.
 
-## 🚀 Performance Highlights
+## Performance Highlights
 
 - **859KB stripped binary** - Minimal footprint
-- **~10x faster** than Python implementation  
+- **~10x faster** than Python implementation
 - **Memory safe** - Zero crashes, no memory leaks
 - **Native machine code** - Maximum performance
 - **Multi-threaded** async runtime with Tokio
 - **<10MB memory usage** typical
 - **Cross-platform** Linux/Windows/macOS support
 
-## ⚡ Benchmark Results
+## Benchmark Results
 
 ```
-🏁 Processed 1M items in 6.661196ms
-📊 Performance: Native compilation advantage
-🚀 Zero GC pauses, zero Python overhead
+ Processed 1M items in 6.661196ms
+ Performance: Native compilation advantage
+ Zero GC pauses, zero Python overhead
 ```
 
-## 🏗️ Architecture
+## ️ Architecture
 
 ### Hybrid C++/Rust Design
 - **Rust Core Engine** (`src/lib.rs`) - Memory-safe MTProto client
-- **C++ Application Layer** (`src/main.cpp`) - Database & export management  
+- **C++ Application Layer** (`src/main.cpp`) - Database & export management
 - **FFI Bridge** - Seamless interop between languages
 - **SQLite3** - High-performance data storage
 - **CMake Build System** - Cross-platform compilation
 
 ### Key Features
-✅ **Advanced Pattern Scraping** - 15+ search patterns  
-✅ **Member Deduplication** - Hash-based unique filtering  
-✅ **Multi-format Export** - JSON, CSV, XML  
-✅ **Thread-Safe Operations** - Concurrent processing  
-✅ **Rate Limiting** - Respect Telegram API limits  
-✅ **Memory Safety** - Rust's ownership model  
-✅ **Database Integration** - SQLite with connection pooling  
+ **Advanced Pattern Scraping** - 15+ search patterns
+ **Member Deduplication** - Hash-based unique filtering
+ **Multi-format Export** - JSON, CSV, XML
+ **Thread-Safe Operations** - Concurrent processing
+ **Rate Limiting** - Respect Telegram API limits
+ **Memory Safety** - Rust's ownership model
+ **Database Integration** - SQLite with connection pooling
 
-## 📦 Quick Start
+## Quick Start
 
 ### Build from Source
 ```bash
@@ -64,21 +64,21 @@ cargo build --release --bin telegram-scraper-native
 ./telegram-scraper-native @test --benchmark
 ```
 
-## 📊 Output Formats
+## Output Formats
 
 ### JSON Export
 ```json
 [
-  {
-    "id": 123456789,
-    "username": "user_example",
-    "first_name": "John",
-    "last_name": "Doe", 
-    "phone": "+1234567890",
-    "is_premium": false,
-    "last_online": 1697123456,
-    "source_group": "@python"
-  }
+ {
+ "id": 123456789,
+ "username": "user_example",
+ "first_name": "John",
+ "last_name": "Doe",
+ "phone": "+1234567890",
+ "is_premium": false,
+ "last_online": 1697123456,
+ "source_group": "@python"
+ }
 ]
 ```
 
@@ -88,18 +88,18 @@ id,username,first_name,last_name,phone,is_premium,last_online,source_group
 123456789,user_example,John,Doe,+1234567890,false,1697123456,@python
 ```
 
-## 🛠️ Development
+## ️ Development
 
 ### Project Structure
 ```
 telegram-scraper-native/
 ├── src/
-│   ├── lib.rs           # Rust FFI core engine
-│   ├── main.rs          # Rust CLI application  
-│   └── main.cpp         # C++ wrapper (optional)
-├── Cargo.toml           # Rust dependencies
-├── CMakeLists.txt       # C++ build configuration
-└── README.md           # This file
+│ ├── lib.rs # Rust FFI core engine
+│ ├── main.rs # Rust CLI application
+│ └── main.cpp # C++ wrapper (optional)
+├── Cargo.toml # Rust dependencies
+├── CMakeLists.txt # C++ build configuration
+└── README.md # This file
 ```
 
 ### Dependencies
@@ -119,30 +119,30 @@ cargo build
 cargo build --target x86_64-pc-windows-gnu --release
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### CLI Arguments
 ```
 telegram-scraper-native [OPTIONS] <TARGET>
 
 Arguments:
-  <TARGET>  Target channel (@username or t.me/channel)
+ <TARGET> Target channel (@username or t.me/channel)
 
 Options:
-  -m, --max-members <MAX_MEMBERS>  Maximum members to scrape [default: 500]
-  -o, --output <OUTPUT>            Output file base name [default: native_scrape_results]
-      --benchmark                  Show performance comparison
-  -h, --help                       Print help
+ -m, --max-members <MAX_MEMBERS> Maximum members to scrape [default: 500]
+ -o, --output <OUTPUT> Output file base name [default: native_scrape_results]
+ --benchmark Show performance comparison
+ -h, --help Print help
 ```
 
-## 🚀 Performance Comparison
+## Performance Comparison
 
 | Implementation | Language | Speed | Memory | Binary Size |
 |---------------|----------|-------|--------|-------------|
 | **Native v2.0** | **Rust** | **~10x faster** | **<10MB** | **859KB** |
 | Original | Python | Baseline | ~50MB+ | N/A |
 
-## 📈 Benchmarks
+## Benchmarks
 
 ### Scraping Performance
 - **Pattern Processing**: 15 patterns in <2 seconds
@@ -152,17 +152,17 @@ Options:
 
 ### System Resources
 ```
-🚀 NATIVE PERFORMANCE STATS:
-   • Language: 100% Rust (memory safe)
-   • Speed: ~10x faster than Python
-   • Memory usage: <10MB typical
-   • Concurrency: Async/await with Tokio
-   • Compilation: Native machine code
-   • Zero GC pauses, zero Python overhead
-   • Ready for production deployment! 🦀
+ NATIVE PERFORMANCE STATS:
+ • Language: 100% Rust (memory safe)
+ • Speed: ~10x faster than Python
+ • Memory usage: <10MB typical
+ • Concurrency: Async/await with Tokio
+ • Compilation: Native machine code
+ • Zero GC pauses, zero Python overhead
+ • Ready for production deployment!
 ```
 
-## 🔐 Security Features
+## Security Features
 
 - **Memory Safety** - Rust prevents buffer overflows
 - **No Data Races** - Thread-safe by design
@@ -170,7 +170,7 @@ Options:
 - **Safe FFI** - Controlled C++ interop boundaries
 - **Error Handling** - Graceful failure modes
 
-## 🌐 Deployment
+## Deployment
 
 ### Production Ready
 - **Static Linking** - Self-contained binary
@@ -194,18 +194,18 @@ use telegram_scraper_native::*;
 let scraper = ScraperEngine::new();
 ```
 
-## 📋 TODO/Roadmap
+## TODO/Roadmap
 
-- [x] ✅ Rust core engine with async runtime
-- [x] ✅ C++ SQLite integration layer
-- [x] ✅ Multi-threaded scraping architecture
-- [x] ✅ CLI interface with feature parity
-- [x] ✅ Optimized release builds
-- [ ] 🔄 Real MTProto Telegram client integration
-- [ ] 🔄 WebSocket proxy support
-- [ ] 🔄 GUI interface (optional)
+- [x] Rust core engine with async runtime
+- [x] C++ SQLite integration layer
+- [x] Multi-threaded scraping architecture
+- [x] CLI interface with feature parity
+- [x] Optimized release builds
+- [ ] Real MTProto Telegram client integration
+- [ ] WebSocket proxy support
+- [ ] GUI interface (optional)
 
-## 🤝 Contributing
+## Contributing
 
 This is a high-performance rewrite of the Python Telegram scraper. Contributions welcome for:
 - Performance optimizations
@@ -213,12 +213,12 @@ This is a high-performance rewrite of the Python Telegram scraper. Contributions
 - Cross-platform compatibility
 - Additional scraping patterns
 
-## 📄 License
+## License
 
 Same as parent project - Educational/Research purposes.
 
 ---
 
-**Built with ❤️ using Rust 🦀 and C++ 🔥 for maximum performance**
+**Built with ️ using Rust and C++ for maximum performance**
 
 *This native implementation demonstrates the power of system programming languages over interpreted alternatives, achieving 10x performance improvements while maintaining memory safety and code reliability.*
